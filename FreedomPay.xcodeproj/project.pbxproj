@@ -8,12 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		4C2C72DA1FE533B10036029F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2C72D91FE533B10036029F /* AppDelegate.swift */; };
-		4C2C72DC1FE533B10036029F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2C72DB1FE533B10036029F /* ViewController.swift */; };
-		4C2C72DF1FE533B10036029F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C2C72DD1FE533B10036029F /* Main.storyboard */; };
 		4C2C72E11FE533B10036029F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C2C72E01FE533B10036029F /* Assets.xcassets */; };
 		4C2C72E41FE533B10036029F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C2C72E21FE533B10036029F /* LaunchScreen.storyboard */; };
 		4C2C72EF1FE533B10036029F /* FreedomPayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2C72EE1FE533B10036029F /* FreedomPayTests.swift */; };
 		4C2C72FA1FE533B10036029F /* FreedomPayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2C72F91FE533B10036029F /* FreedomPayUITests.swift */; };
+		4C2C73161FE542FD0036029F /* FreedomPayAppFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C2C730D1FE542FD0036029F /* FreedomPayAppFramework.framework */; };
+		4C2C731D1FE542FD0036029F /* FreedomPayAppFrameworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2C731C1FE542FD0036029F /* FreedomPayAppFrameworkTests.swift */; };
+		4C2C731F1FE542FD0036029F /* FreedomPayAppFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C2C730F1FE542FD0036029F /* FreedomPayAppFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4C2C73221FE542FD0036029F /* FreedomPayAppFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C2C730D1FE542FD0036029F /* FreedomPayAppFramework.framework */; };
+		4C2C73231FE542FD0036029F /* FreedomPayAppFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4C2C730D1FE542FD0036029F /* FreedomPayAppFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4C2C732B1FE543130036029F /* DateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2C72DB1FE533B10036029F /* DateViewController.swift */; };
+		4CD2F05B1FE5681700DFAFA9 /* DateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2C72DB1FE533B10036029F /* DateViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,13 +36,47 @@
 			remoteGlobalIDString = 4C2C72D51FE533B10036029F;
 			remoteInfo = FreedomPay;
 		};
+		4C2C73171FE542FD0036029F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4C2C72CE1FE533B10036029F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4C2C730C1FE542FD0036029F;
+			remoteInfo = FreedomPayAppFramework;
+		};
+		4C2C73191FE542FD0036029F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4C2C72CE1FE533B10036029F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4C2C72D51FE533B10036029F;
+			remoteInfo = FreedomPay;
+		};
+		4C2C73201FE542FD0036029F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4C2C72CE1FE533B10036029F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4C2C730C1FE542FD0036029F;
+			remoteInfo = FreedomPayAppFramework;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4C2C73271FE542FD0036029F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4C2C73231FE542FD0036029F /* FreedomPayAppFramework.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		4C2C72D61FE533B10036029F /* FreedomPay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FreedomPay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C2C72D91FE533B10036029F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4C2C72DB1FE533B10036029F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		4C2C72DE1FE533B10036029F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4C2C72DB1FE533B10036029F /* DateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateViewController.swift; sourceTree = "<group>"; };
 		4C2C72E01FE533B10036029F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C2C72E31FE533B10036029F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4C2C72E51FE533B10036029F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +86,13 @@
 		4C2C72F51FE533B10036029F /* FreedomPayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FreedomPayUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C2C72F91FE533B10036029F /* FreedomPayUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreedomPayUITests.swift; sourceTree = "<group>"; };
 		4C2C72FB1FE533B10036029F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C2C730D1FE542FD0036029F /* FreedomPayAppFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FreedomPayAppFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C2C730F1FE542FD0036029F /* FreedomPayAppFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FreedomPayAppFramework.h; sourceTree = "<group>"; };
+		4C2C73101FE542FD0036029F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C2C73151FE542FD0036029F /* FreedomPayAppFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FreedomPayAppFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C2C731C1FE542FD0036029F /* FreedomPayAppFrameworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreedomPayAppFrameworkTests.swift; sourceTree = "<group>"; };
+		4C2C731E1FE542FD0036029F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4CD2F05A1FE5471100DFAFA9 /* FreedomPay.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = FreedomPay.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C2C73221FE542FD0036029F /* FreedomPayAppFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +118,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4C2C73091FE542FD0036029F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C2C73121FE542FD0036029F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C2C73161FE542FD0036029F /* FreedomPayAppFramework.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -80,6 +142,8 @@
 				4C2C72D81FE533B10036029F /* FreedomPay */,
 				4C2C72ED1FE533B10036029F /* FreedomPayTests */,
 				4C2C72F81FE533B10036029F /* FreedomPayUITests */,
+				4C2C730E1FE542FD0036029F /* FreedomPayAppFramework */,
+				4C2C731B1FE542FD0036029F /* FreedomPayAppFrameworkTests */,
 				4C2C72D71FE533B10036029F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,6 +154,8 @@
 				4C2C72D61FE533B10036029F /* FreedomPay.app */,
 				4C2C72EA1FE533B10036029F /* FreedomPayTests.xctest */,
 				4C2C72F51FE533B10036029F /* FreedomPayUITests.xctest */,
+				4C2C730D1FE542FD0036029F /* FreedomPayAppFramework.framework */,
+				4C2C73151FE542FD0036029F /* FreedomPayAppFrameworkTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -98,8 +164,6 @@
 			isa = PBXGroup;
 			children = (
 				4C2C72D91FE533B10036029F /* AppDelegate.swift */,
-				4C2C72DB1FE533B10036029F /* ViewController.swift */,
-				4C2C72DD1FE533B10036029F /* Main.storyboard */,
 				4C2C72E01FE533B10036029F /* Assets.xcassets */,
 				4C2C72E21FE533B10036029F /* LaunchScreen.storyboard */,
 				4C2C72E51FE533B10036029F /* Info.plist */,
@@ -125,7 +189,38 @@
 			path = FreedomPayUITests;
 			sourceTree = "<group>";
 		};
+		4C2C730E1FE542FD0036029F /* FreedomPayAppFramework */ = {
+			isa = PBXGroup;
+			children = (
+				4CD2F05A1FE5471100DFAFA9 /* FreedomPay.playground */,
+				4C2C72DB1FE533B10036029F /* DateViewController.swift */,
+				4C2C730F1FE542FD0036029F /* FreedomPayAppFramework.h */,
+				4C2C73101FE542FD0036029F /* Info.plist */,
+			);
+			path = FreedomPayAppFramework;
+			sourceTree = "<group>";
+		};
+		4C2C731B1FE542FD0036029F /* FreedomPayAppFrameworkTests */ = {
+			isa = PBXGroup;
+			children = (
+				4C2C731C1FE542FD0036029F /* FreedomPayAppFrameworkTests.swift */,
+				4C2C731E1FE542FD0036029F /* Info.plist */,
+			);
+			path = FreedomPayAppFrameworkTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		4C2C730A1FE542FD0036029F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C2C731F1FE542FD0036029F /* FreedomPayAppFramework.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		4C2C72D51FE533B10036029F /* FreedomPay */ = {
@@ -135,10 +230,12 @@
 				4C2C72D21FE533B10036029F /* Sources */,
 				4C2C72D31FE533B10036029F /* Frameworks */,
 				4C2C72D41FE533B10036029F /* Resources */,
+				4C2C73271FE542FD0036029F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				4C2C73211FE542FD0036029F /* PBXTargetDependency */,
 			);
 			name = FreedomPay;
 			productName = FreedomPay;
@@ -181,6 +278,43 @@
 			productReference = 4C2C72F51FE533B10036029F /* FreedomPayUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		4C2C730C1FE542FD0036029F /* FreedomPayAppFramework */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4C2C73241FE542FD0036029F /* Build configuration list for PBXNativeTarget "FreedomPayAppFramework" */;
+			buildPhases = (
+				4C2C73081FE542FD0036029F /* Sources */,
+				4C2C73091FE542FD0036029F /* Frameworks */,
+				4C2C730A1FE542FD0036029F /* Headers */,
+				4C2C730B1FE542FD0036029F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FreedomPayAppFramework;
+			productName = FreedomPayAppFramework;
+			productReference = 4C2C730D1FE542FD0036029F /* FreedomPayAppFramework.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		4C2C73141FE542FD0036029F /* FreedomPayAppFrameworkTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4C2C73281FE542FD0036029F /* Build configuration list for PBXNativeTarget "FreedomPayAppFrameworkTests" */;
+			buildPhases = (
+				4C2C73111FE542FD0036029F /* Sources */,
+				4C2C73121FE542FD0036029F /* Frameworks */,
+				4C2C73131FE542FD0036029F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4C2C73181FE542FD0036029F /* PBXTargetDependency */,
+				4C2C731A1FE542FD0036029F /* PBXTargetDependency */,
+			);
+			name = FreedomPayAppFrameworkTests;
+			productName = FreedomPayAppFrameworkTests;
+			productReference = 4C2C73151FE542FD0036029F /* FreedomPayAppFrameworkTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -205,6 +339,15 @@
 						ProvisioningStyle = Automatic;
 						TestTargetID = 4C2C72D51FE533B10036029F;
 					};
+					4C2C730C1FE542FD0036029F = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					4C2C73141FE542FD0036029F = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 4C2C72D51FE533B10036029F;
+					};
 				};
 			};
 			buildConfigurationList = 4C2C72D11FE533B10036029F /* Build configuration list for PBXProject "FreedomPay" */;
@@ -223,6 +366,8 @@
 				4C2C72D51FE533B10036029F /* FreedomPay */,
 				4C2C72E91FE533B10036029F /* FreedomPayTests */,
 				4C2C72F41FE533B10036029F /* FreedomPayUITests */,
+				4C2C730C1FE542FD0036029F /* FreedomPayAppFramework */,
+				4C2C73141FE542FD0036029F /* FreedomPayAppFrameworkTests */,
 			);
 		};
 /* End PBXProject section */
@@ -234,7 +379,6 @@
 			files = (
 				4C2C72E41FE533B10036029F /* LaunchScreen.storyboard in Resources */,
 				4C2C72E11FE533B10036029F /* Assets.xcassets in Resources */,
-				4C2C72DF1FE533B10036029F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,6 +396,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4C2C730B1FE542FD0036029F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C2C73131FE542FD0036029F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -259,7 +417,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C2C72DC1FE533B10036029F /* ViewController.swift in Sources */,
+				4CD2F05B1FE5681700DFAFA9 /* DateViewController.swift in Sources */,
 				4C2C72DA1FE533B10036029F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,6 +438,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4C2C73081FE542FD0036029F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C2C732B1FE543130036029F /* DateViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C2C73111FE542FD0036029F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C2C731D1FE542FD0036029F /* FreedomPayAppFrameworkTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -293,17 +467,24 @@
 			target = 4C2C72D51FE533B10036029F /* FreedomPay */;
 			targetProxy = 4C2C72F61FE533B10036029F /* PBXContainerItemProxy */;
 		};
+		4C2C73181FE542FD0036029F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4C2C730C1FE542FD0036029F /* FreedomPayAppFramework */;
+			targetProxy = 4C2C73171FE542FD0036029F /* PBXContainerItemProxy */;
+		};
+		4C2C731A1FE542FD0036029F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4C2C72D51FE533B10036029F /* FreedomPay */;
+			targetProxy = 4C2C73191FE542FD0036029F /* PBXContainerItemProxy */;
+		};
+		4C2C73211FE542FD0036029F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4C2C730C1FE542FD0036029F /* FreedomPayAppFramework */;
+			targetProxy = 4C2C73201FE542FD0036029F /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		4C2C72DD1FE533B10036029F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4C2C72DE1FE533B10036029F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		4C2C72E21FE533B10036029F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -425,6 +606,7 @@
 		4C2C72FF1FE533B10036029F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = FreedomPay/Info.plist;
@@ -439,6 +621,7 @@
 		4C2C73001FE533B10036029F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = FreedomPay/Info.plist;
@@ -512,6 +695,82 @@
 			};
 			name = Release;
 		};
+		4C2C73251FE542FD0036029F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = FreedomPayAppFramework/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Michael.FreedomPayAppFramework;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		4C2C73261FE542FD0036029F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = FreedomPayAppFramework/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Michael.FreedomPayAppFramework;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4C2C73291FE542FD0036029F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FreedomPayAppFrameworkTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Michael.FreedomPayAppFrameworkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FreedomPay.app/FreedomPay";
+			};
+			name = Debug;
+		};
+		4C2C732A1FE542FD0036029F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FreedomPayAppFrameworkTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Michael.FreedomPayAppFrameworkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FreedomPay.app/FreedomPay";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -547,6 +806,24 @@
 			buildConfigurations = (
 				4C2C73051FE533B10036029F /* Debug */,
 				4C2C73061FE533B10036029F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4C2C73241FE542FD0036029F /* Build configuration list for PBXNativeTarget "FreedomPayAppFramework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C2C73251FE542FD0036029F /* Debug */,
+				4C2C73261FE542FD0036029F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4C2C73281FE542FD0036029F /* Build configuration list for PBXNativeTarget "FreedomPayAppFrameworkTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C2C73291FE542FD0036029F /* Debug */,
+				4C2C732A1FE542FD0036029F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
