@@ -30,7 +30,7 @@ struct DateViewModel {
 
 protocol DateViewControllerInteractor: UIPickerViewDelegate {
     var dataSource: PickerDataSource { get set }
-    func isValid(pickerView: UIPickerView) -> Bool
+    func isValid() -> Bool
 }
 
 protocol DateView: class {
@@ -284,6 +284,8 @@ class DateViewControllerLogic: NSObject, DateViewControllerInteractor, UIPickerV
         dataSource = setupDataSource()
     }
     
+    var currentDate: DateStruct?
+    
     private func setupDataSource() -> PickerDataSource {
         let yearData: [CellInfo] = [BlankCell()] + Array(currentYear...currentYear+20).map { year in
             return YearPickerCell(displayValue: String(year), rawValue: year)
@@ -322,8 +324,8 @@ class DateViewControllerLogic: NSObject, DateViewControllerInteractor, UIPickerV
         return DateStruct(month: _selectedMonth, year: _selectedYear)
     }
     
-    func isValid(pickerView: UIPickerView) -> Bool {
-        guard let date = getDate(pickerView: pickerView) else {
+    func isValid() -> Bool {
+        guard let date = currentDate else {
             return false
         }
         if date.year != CalendarData.currentYear {
@@ -335,9 +337,8 @@ class DateViewControllerLogic: NSObject, DateViewControllerInteractor, UIPickerV
     
     //MARK - PickerViewDelegate
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        guard let date = getDate(pickerView: pickerView) else {
-            return
-        }
+        currentDate = getDate(pickerView: pickerView)
+        presenter?.updateView(forDate: currentDate)
     }
     
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
