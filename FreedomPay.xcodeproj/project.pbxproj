@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		4C16350E1FE8A1C700B9FC1E /* miscHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C16350D1FE8A1C700B9FC1E /* miscHelpers.swift */; };
+		4C1635101FE8A27100B9FC1E /* Sections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C16350F1FE8A27100B9FC1E /* Sections.swift */; };
+		4C1635111FE8A30400B9FC1E /* Sections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C16350F1FE8A27100B9FC1E /* Sections.swift */; };
+		4C1635121FE8A30800B9FC1E /* miscHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C16350D1FE8A1C700B9FC1E /* miscHelpers.swift */; };
+		4C1635151FE8A35400B9FC1E /* DateScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1635141FE8A35300B9FC1E /* DateScene.swift */; };
+		4C1635181FE8A3AE00B9FC1E /* DateViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1635171FE8A3AE00B9FC1E /* DateViewInteractor.swift */; };
+		4C16351A1FE8A45700B9FC1E /* PickerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1635191FE8A45700B9FC1E /* PickerDataSource.swift */; };
+		4C16351F1FE8A4CE00B9FC1E /* DateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C16351E1FE8A4CE00B9FC1E /* DateViewController.swift */; };
+		4C1635211FE8A53D00B9FC1E /* DatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1635201FE8A53D00B9FC1E /* DatePickerView.swift */; };
+		4C1635241FE8A58C00B9FC1E /* DatePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1635231FE8A58C00B9FC1E /* DatePresenter.swift */; };
 		4C2C72DA1FE533B10036029F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2C72D91FE533B10036029F /* AppDelegate.swift */; };
 		4C2C72E11FE533B10036029F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C2C72E01FE533B10036029F /* Assets.xcassets */; };
 		4C2C72E41FE533B10036029F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C2C72E21FE533B10036029F /* LaunchScreen.storyboard */; };
@@ -18,8 +27,6 @@
 		4C2C731F1FE542FD0036029F /* FreedomPayAppFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C2C730F1FE542FD0036029F /* FreedomPayAppFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4C2C73221FE542FD0036029F /* FreedomPayAppFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C2C730D1FE542FD0036029F /* FreedomPayAppFramework.framework */; };
 		4C2C73231FE542FD0036029F /* FreedomPayAppFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4C2C730D1FE542FD0036029F /* FreedomPayAppFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		4C2C732B1FE543130036029F /* DateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2C72DB1FE533B10036029F /* DateViewController.swift */; };
-		4CD2F05B1FE5681700DFAFA9 /* DateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2C72DB1FE533B10036029F /* DateViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,9 +83,15 @@
 
 /* Begin PBXFileReference section */
 		4C16350D1FE8A1C700B9FC1E /* miscHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = miscHelpers.swift; sourceTree = "<group>"; };
+		4C16350F1FE8A27100B9FC1E /* Sections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sections.swift; sourceTree = "<group>"; };
+		4C1635141FE8A35300B9FC1E /* DateScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateScene.swift; sourceTree = "<group>"; };
+		4C1635171FE8A3AE00B9FC1E /* DateViewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateViewInteractor.swift; sourceTree = "<group>"; };
+		4C1635191FE8A45700B9FC1E /* PickerDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerDataSource.swift; sourceTree = "<group>"; };
+		4C16351E1FE8A4CE00B9FC1E /* DateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateViewController.swift; sourceTree = "<group>"; };
+		4C1635201FE8A53D00B9FC1E /* DatePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerView.swift; sourceTree = "<group>"; };
+		4C1635231FE8A58C00B9FC1E /* DatePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePresenter.swift; sourceTree = "<group>"; };
 		4C2C72D61FE533B10036029F /* FreedomPay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FreedomPay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C2C72D91FE533B10036029F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4C2C72DB1FE533B10036029F /* DateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateViewController.swift; sourceTree = "<group>"; };
 		4C2C72E01FE533B10036029F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C2C72E31FE533B10036029F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4C2C72E51FE533B10036029F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -142,8 +155,46 @@
 			isa = PBXGroup;
 			children = (
 				4C16350D1FE8A1C700B9FC1E /* miscHelpers.swift */,
+				4C16350F1FE8A27100B9FC1E /* Sections.swift */,
 			);
 			path = Utility;
+			sourceTree = "<group>";
+		};
+		4C1635131FE8A34000B9FC1E /* DateScene */ = {
+			isa = PBXGroup;
+			children = (
+				4C1635221FE8A57700B9FC1E /* Presenters */,
+				4C16351D1FE8A4BC00B9FC1E /* Views */,
+				4C1635161FE8A37600B9FC1E /* Interactors */,
+				4C1635141FE8A35300B9FC1E /* DateScene.swift */,
+			);
+			path = DateScene;
+			sourceTree = "<group>";
+		};
+		4C1635161FE8A37600B9FC1E /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+				4C1635171FE8A3AE00B9FC1E /* DateViewInteractor.swift */,
+				4C1635191FE8A45700B9FC1E /* PickerDataSource.swift */,
+			);
+			path = Interactors;
+			sourceTree = "<group>";
+		};
+		4C16351D1FE8A4BC00B9FC1E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4C16351E1FE8A4CE00B9FC1E /* DateViewController.swift */,
+				4C1635201FE8A53D00B9FC1E /* DatePickerView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4C1635221FE8A57700B9FC1E /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				4C1635231FE8A58C00B9FC1E /* DatePresenter.swift */,
+			);
+			path = Presenters;
 			sourceTree = "<group>";
 		};
 		4C2C72CD1FE533B10036029F = {
@@ -202,9 +253,9 @@
 		4C2C730E1FE542FD0036029F /* FreedomPayAppFramework */ = {
 			isa = PBXGroup;
 			children = (
+				4C1635131FE8A34000B9FC1E /* DateScene */,
 				4C16350C1FE8A1A600B9FC1E /* Utility */,
 				4CD2F05A1FE5471100DFAFA9 /* FreedomPay.playground */,
-				4C2C72DB1FE533B10036029F /* DateViewController.swift */,
 				4C2C730F1FE542FD0036029F /* FreedomPayAppFramework.h */,
 				4C2C73101FE542FD0036029F /* Info.plist */,
 			);
@@ -428,8 +479,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4CD2F05B1FE5681700DFAFA9 /* DateViewController.swift in Sources */,
+				4C1635111FE8A30400B9FC1E /* Sections.swift in Sources */,
 				4C2C72DA1FE533B10036029F /* AppDelegate.swift in Sources */,
+				4C1635121FE8A30800B9FC1E /* miscHelpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,7 +505,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C2C732B1FE543130036029F /* DateViewController.swift in Sources */,
+				4C16351A1FE8A45700B9FC1E /* PickerDataSource.swift in Sources */,
+				4C1635241FE8A58C00B9FC1E /* DatePresenter.swift in Sources */,
+				4C16351F1FE8A4CE00B9FC1E /* DateViewController.swift in Sources */,
+				4C1635181FE8A3AE00B9FC1E /* DateViewInteractor.swift in Sources */,
+				4C1635101FE8A27100B9FC1E /* Sections.swift in Sources */,
+				4C1635151FE8A35400B9FC1E /* DateScene.swift in Sources */,
+				4C1635211FE8A53D00B9FC1E /* DatePickerView.swift in Sources */,
 				4C16350E1FE8A1C700B9FC1E /* miscHelpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
