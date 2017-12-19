@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C16350E1FE8A1C700B9FC1E /* miscHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C16350D1FE8A1C700B9FC1E /* miscHelpers.swift */; };
 		4C2C72DA1FE533B10036029F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2C72D91FE533B10036029F /* AppDelegate.swift */; };
 		4C2C72E11FE533B10036029F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C2C72E01FE533B10036029F /* Assets.xcassets */; };
 		4C2C72E41FE533B10036029F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C2C72E21FE533B10036029F /* LaunchScreen.storyboard */; };
@@ -74,6 +75,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4C16350D1FE8A1C700B9FC1E /* miscHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = miscHelpers.swift; sourceTree = "<group>"; };
 		4C2C72D61FE533B10036029F /* FreedomPay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FreedomPay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C2C72D91FE533B10036029F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C2C72DB1FE533B10036029F /* DateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateViewController.swift; sourceTree = "<group>"; };
@@ -136,6 +138,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C16350C1FE8A1A600B9FC1E /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				4C16350D1FE8A1C700B9FC1E /* miscHelpers.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
 		4C2C72CD1FE533B10036029F = {
 			isa = PBXGroup;
 			children = (
@@ -192,6 +202,7 @@
 		4C2C730E1FE542FD0036029F /* FreedomPayAppFramework */ = {
 			isa = PBXGroup;
 			children = (
+				4C16350C1FE8A1A600B9FC1E /* Utility */,
 				4CD2F05A1FE5471100DFAFA9 /* FreedomPay.playground */,
 				4C2C72DB1FE533B10036029F /* DateViewController.swift */,
 				4C2C730F1FE542FD0036029F /* FreedomPayAppFramework.h */,
@@ -443,6 +454,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C2C732B1FE543130036029F /* DateViewController.swift in Sources */,
+				4C16350E1FE8A1C700B9FC1E /* miscHelpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

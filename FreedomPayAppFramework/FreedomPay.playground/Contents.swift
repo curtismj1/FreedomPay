@@ -28,9 +28,14 @@ struct DateViewModel {
     let labelText: String?
 }
 
+enum Result<SuccessType, ErrorType> {
+    case success(result: SuccessType)
+    case error(error: ErrorType)
+}
+
 protocol DateViewControllerInteractor: UIPickerViewDelegate {
     var dataSource: PickerDataSource { get set }
-    func isValid() -> Bool
+    func isValid() -> Result<DateStruct, String>
 }
 
 protocol DateView: class {
@@ -39,6 +44,7 @@ protocol DateView: class {
 
 protocol DateViewPresenter: class {
     func updateView(forDate date: DateStruct?)
+    
 }
 
 class DateViewPresentationLogic: DateViewPresenter {
@@ -60,8 +66,8 @@ class DateViewPresentationLogic: DateViewPresenter {
 
 class DateViewController: UIViewController, DateView, UITextFieldDelegate {
     
-    let doneButton: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: nil)
-    
+    lazy var doneButton: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(submitForm))
+
     let interactor: DateViewControllerInteractor
     
     let mainStackView: UIStackView = {
@@ -111,7 +117,7 @@ class DateViewController: UIViewController, DateView, UITextFieldDelegate {
         picker.datePicker.delegate = self.interactor
         picker.datePicker.dataSource = self.interactor.dataSource
         picker.isHidden = true
-        picker.doneButton.action = #selector(resign)
+        picker.doneButton.action = #selector(trySubmitDate)
         return picker
     }()
     
@@ -126,7 +132,7 @@ class DateViewController: UIViewController, DateView, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(resign)))
+        view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(trySubmitDate)))
         view.backgroundColor = .white
         edgesForExtendedLayout = []
         setupSubviews()
@@ -135,9 +141,17 @@ class DateViewController: UIViewController, DateView, UITextFieldDelegate {
     }
     
     @objc
-    func resign() {
-        UIView.animate(withDuration: 0.75) { [weak self] in
-            self?.textField.endEditing(false)
+    func trySubmitDate() {
+        let result = interactor.isValid()
+        switch result {
+        case .success(let date):
+            UIView.animate(withDuration: 0.75) { [weak self] in
+                self?.textField.endEditing(false)
+            }
+        case .error(let message):
+            let alert = UIAlertController(title: "Validation Error", message: message, preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Done", style: .cancel, handler: nil))
+            present(alert, animated: false, completion: nil)
         }
     }
     
@@ -162,8 +176,15 @@ class DateViewController: UIViewController, DateView, UITextFieldDelegate {
             self?.datePicker.isHidden = false
         }
     }
+    
     @objc func textFieldDidEndEditing(_ textField: UITextField, reason: UITextFieldDidEndEditingReason) {
         datePicker.isHidden = true
+    }
+    
+    @objc func submitForm() {
+        let alert = UIAlertController(title: "Success", message: "Thank you, the data has been saved.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Done", style: .cancel, handler: nil))
+        present(alert, animated: false, completion: nil)
     }
     
     func updateView(viewModel: DateViewModel) {
@@ -324,14 +345,15 @@ class DateViewControllerLogic: NSObject, DateViewControllerInteractor, UIPickerV
         return DateStruct(month: _selectedMonth, year: _selectedYear)
     }
     
-    func isValid() -> Bool {
+    func isValid() -> Result<DateStruct, String> {
         guard let date = currentDate else {
-            return false
+            return .error(error: "Current Date not selected.")
         }
-        if date.year != CalendarData.currentYear {
-            return date.year > CalendarData.currentYear
+        if date.year > CalendarData.currentYear
+            || (date.year == CalendarData.currentYear && date.month >= CalendarData.currentMonth) {
+            return .success(result: date)
         } else {
-            return date.month >= CalendarData.currentMonth
+            return .error(error: "The selected date cannot be in the past.")
         }
     }
     
@@ -379,7 +401,6 @@ let interactor = DateViewControllerLogic()
 let rvc = DateViewController(interactor: interactor)
 let presenter = DateViewPresentationLogic(view: rvc)
 interactor.presenter = presenter
-
 let navVC = UINavigationController(rootViewController: rvc)
 
 PlaygroundPage.current.liveView = navVC
