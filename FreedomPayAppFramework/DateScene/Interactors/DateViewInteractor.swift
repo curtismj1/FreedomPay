@@ -42,7 +42,7 @@ class DateViewControllerLogic: NSObject, DateViewControllerInteractor, UIPickerV
         return PickerDataSource(sections: sections)
     }
     
-    func getDate(pickerView: UIPickerView) -> DateStruct? {
+    public func getDate(pickerView: UIPickerView) -> DateStruct? {
         var selectedMonth: Int?
         var selectedYear: Int?
         (0..<pickerView.numberOfComponents).forEach { section in
@@ -63,7 +63,7 @@ class DateViewControllerLogic: NSObject, DateViewControllerInteractor, UIPickerV
         return DateStruct(month: _selectedMonth, year: _selectedYear)
     }
     
-    func isValid() -> Result<DateStruct, String> {
+    public func isValid() -> Result<DateStruct, String> {
         guard let date = currentDate else {
             return .error(error: DateInteractorConfig.Strings.noDateSelected)
         }

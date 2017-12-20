@@ -32,7 +32,7 @@ struct DateViewModel {
     let labelText: String?
 }
 
-enum Result<SuccessType, ErrorType> {
+public enum Result<SuccessType, ErrorType> {
     case success(result: SuccessType)
     case error(error: ErrorType)
 }

@@ -18,6 +18,7 @@
 		4C1635211FE8A53D00B9FC1E /* DatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1635201FE8A53D00B9FC1E /* DatePickerView.swift */; };
 		4C1635241FE8A58C00B9FC1E /* DatePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1635231FE8A58C00B9FC1E /* DatePresenter.swift */; };
 		4C1635261FEA88F500B9FC1E /* DateSceneConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1635251FEA88F500B9FC1E /* DateSceneConfig.swift */; };
+		4C1635291FEA937C00B9FC1E /* DateSceneUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1635281FEA937B00B9FC1E /* DateSceneUnitTests.swift */; };
 		4C2C72DA1FE533B10036029F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2C72D91FE533B10036029F /* AppDelegate.swift */; };
 		4C2C72E11FE533B10036029F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C2C72E01FE533B10036029F /* Assets.xcassets */; };
 		4C2C72E41FE533B10036029F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C2C72E21FE533B10036029F /* LaunchScreen.storyboard */; };
@@ -92,6 +93,7 @@
 		4C1635201FE8A53D00B9FC1E /* DatePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerView.swift; sourceTree = "<group>"; };
 		4C1635231FE8A58C00B9FC1E /* DatePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePresenter.swift; sourceTree = "<group>"; };
 		4C1635251FEA88F500B9FC1E /* DateSceneConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSceneConfig.swift; sourceTree = "<group>"; };
+		4C1635281FEA937B00B9FC1E /* DateSceneUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSceneUnitTests.swift; sourceTree = "<group>"; };
 		4C2C72D61FE533B10036029F /* FreedomPay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FreedomPay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C2C72D91FE533B10036029F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C2C72E01FE533B10036029F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -200,6 +202,14 @@
 			path = Presenters;
 			sourceTree = "<group>";
 		};
+		4C1635271FEA934400B9FC1E /* Unit Tests */ = {
+			isa = PBXGroup;
+			children = (
+				4C1635281FEA937B00B9FC1E /* DateSceneUnitTests.swift */,
+			);
+			path = "Unit Tests";
+			sourceTree = "<group>";
+		};
 		4C2C72CD1FE533B10036029F = {
 			isa = PBXGroup;
 			children = (
@@ -256,6 +266,7 @@
 		4C2C730E1FE542FD0036029F /* FreedomPayAppFramework */ = {
 			isa = PBXGroup;
 			children = (
+				4C1635271FEA934400B9FC1E /* Unit Tests */,
 				4C1635131FE8A34000B9FC1E /* DateScene */,
 				4C16350C1FE8A1A600B9FC1E /* Utility */,
 				4CD2F05A1FE5471100DFAFA9 /* FreedomPay.playground */,
@@ -492,6 +503,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C1635291FEA937C00B9FC1E /* DateSceneUnitTests.swift in Sources */,
 				4C2C72EF1FE533B10036029F /* FreedomPayTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

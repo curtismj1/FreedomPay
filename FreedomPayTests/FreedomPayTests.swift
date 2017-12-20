@@ -24,7 +24,7 @@ enum Month: Int {
     case December = 12
 }
 
-class CalendarData {
+public class CalendarData {
     
     static var currentYear: Int {
         let date = Date()
