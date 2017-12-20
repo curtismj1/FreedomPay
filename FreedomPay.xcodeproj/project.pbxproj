@@ -17,6 +17,7 @@
 		4C16351F1FE8A4CE00B9FC1E /* DateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C16351E1FE8A4CE00B9FC1E /* DateViewController.swift */; };
 		4C1635211FE8A53D00B9FC1E /* DatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1635201FE8A53D00B9FC1E /* DatePickerView.swift */; };
 		4C1635241FE8A58C00B9FC1E /* DatePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1635231FE8A58C00B9FC1E /* DatePresenter.swift */; };
+		4C1635261FEA88F500B9FC1E /* DateSceneConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1635251FEA88F500B9FC1E /* DateSceneConfig.swift */; };
 		4C2C72DA1FE533B10036029F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2C72D91FE533B10036029F /* AppDelegate.swift */; };
 		4C2C72E11FE533B10036029F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C2C72E01FE533B10036029F /* Assets.xcassets */; };
 		4C2C72E41FE533B10036029F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C2C72E21FE533B10036029F /* LaunchScreen.storyboard */; };
@@ -90,6 +91,7 @@
 		4C16351E1FE8A4CE00B9FC1E /* DateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateViewController.swift; sourceTree = "<group>"; };
 		4C1635201FE8A53D00B9FC1E /* DatePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerView.swift; sourceTree = "<group>"; };
 		4C1635231FE8A58C00B9FC1E /* DatePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePresenter.swift; sourceTree = "<group>"; };
+		4C1635251FEA88F500B9FC1E /* DateSceneConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSceneConfig.swift; sourceTree = "<group>"; };
 		4C2C72D61FE533B10036029F /* FreedomPay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FreedomPay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C2C72D91FE533B10036029F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C2C72E01FE533B10036029F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 		4C1635131FE8A34000B9FC1E /* DateScene */ = {
 			isa = PBXGroup;
 			children = (
+				4C1635251FEA88F500B9FC1E /* DateSceneConfig.swift */,
 				4C1635221FE8A57700B9FC1E /* Presenters */,
 				4C16351D1FE8A4BC00B9FC1E /* Views */,
 				4C1635161FE8A37600B9FC1E /* Interactors */,
@@ -507,6 +510,7 @@
 			files = (
 				4C16351A1FE8A45700B9FC1E /* PickerDataSource.swift in Sources */,
 				4C1635241FE8A58C00B9FC1E /* DatePresenter.swift in Sources */,
+				4C1635261FEA88F500B9FC1E /* DateSceneConfig.swift in Sources */,
 				4C16351F1FE8A4CE00B9FC1E /* DateViewController.swift in Sources */,
 				4C1635181FE8A3AE00B9FC1E /* DateViewInteractor.swift in Sources */,
 				4C1635101FE8A27100B9FC1E /* Sections.swift in Sources */,

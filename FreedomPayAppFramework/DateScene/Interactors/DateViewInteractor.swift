@@ -31,9 +31,7 @@ class DateViewControllerLogic: NSObject, DateViewControllerInteractor, UIPickerV
         let yearData: [CellInfo] = [BlankCell()] + Array(currentYear...currentYear+20).map { year in
             return YearPickerCell(displayValue: String(year), rawValue: year)
         }
-        let monthData: [CellInfo] = [BlankCell()] + ["1 - JAN", "2- FEB", "3 - MAR", "4 - APR",
-                                                     "5- MAY", "6 - JUN", "7 - JUL", "8- AUG",
-                                                     "9 - SEP", "10 - OV", "11- NOV", "12 - DEC"]
+        let monthData: [CellInfo] = [BlankCell()] + DateInteractorConfig.monthData
             .enumerated()
             .map { (tuple: (index: Int, displayData: String)) -> MonthPickerCell in
                 return MonthPickerCell(displayValue: tuple.displayData, rawValue: tuple.index + 1)
@@ -67,13 +65,13 @@ class DateViewControllerLogic: NSObject, DateViewControllerInteractor, UIPickerV
     
     func isValid() -> Result<DateStruct, String> {
         guard let date = currentDate else {
-            return .error(error: "Current Date not selected.")
+            return .error(error: DateInteractorConfig.Strings.noDateSelected)
         }
         if date.year > CalendarData.currentYear
             || (date.year == CalendarData.currentYear && date.month >= CalendarData.currentMonth) {
             return .success(result: date)
         } else {
-            return .error(error: "The selected date cannot be in the past.")
+            return .error(error: DateInteractorConfig.Strings.dateCannotBeInPast)
         }
     }
     

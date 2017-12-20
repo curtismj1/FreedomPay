@@ -45,7 +45,7 @@ class DateViewController: UIViewController, DateView, UITextFieldDelegate {
     lazy var textField: UITextField = {
         let tf = UITextField()
         tf.translatesAutoresizingMaskIntoConstraints = false
-        tf.placeholder = "Required"
+        tf.placeholder = DateViewConfig.Strings.textFieldPlaceholder
         tf.backgroundColor = .white
         tf.delegate = self
         tf.inputView = UIView()
@@ -56,7 +56,7 @@ class DateViewController: UIViewController, DateView, UITextFieldDelegate {
     let expirationLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Expiry Date"
+        label.text = DateViewConfig.Strings.expiryLabelDefault
         label.font = UIFont.systemFont(ofSize: 10)
         return label
     }()
@@ -86,7 +86,7 @@ class DateViewController: UIViewController, DateView, UITextFieldDelegate {
         edgesForExtendedLayout = []
         setupSubviews()
         navigationItem.rightBarButtonItem = doneButton
-        navigationItem.title = "Card Date"
+        navigationItem.title = DateViewConfig.Strings.navigationTitle
     }
     
     @objc
@@ -94,11 +94,11 @@ class DateViewController: UIViewController, DateView, UITextFieldDelegate {
         let result = interactor.isValid()
         switch result {
         case .success(let date):
-            UIView.animate(withDuration: 0.75) { [weak self] in
+            UIView.animate(withDuration: DateViewConfig.Animation.duration) { [weak self] in
                 self?.textField.endEditing(false)
             }
         case .error(let message):
-            let alert = UIAlertController(title: "Validation Error", message: message, preferredStyle: UIAlertControllerStyle.alert)
+            let alert = UIAlertController(title: DateViewConfig.Strings.SubmitFormFailure.title, message: message, preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title: "Done", style: .cancel, handler: nil))
             present(alert, animated: false, completion: nil)
         }
@@ -121,20 +121,22 @@ class DateViewController: UIViewController, DateView, UITextFieldDelegate {
     }
     
     @objc func editingDidBegin(_ sender: UITextField) {
-        UIView.animate(withDuration: 0.75) { [weak self] in
+        UIView.animate(withDuration: DateViewConfig.Animation.duration) { [weak self] in
             self?.datePicker.isHidden = false
         }
     }
     
     @objc func textFieldDidEndEditing(_ textField: UITextField, reason: UITextFieldDidEndEditingReason) {
-        datePicker.isHidden = true
+        UIView.animate(withDuration: DateViewConfig.Animation.duration) { [weak self] in
+            self?.datePicker.isHidden = true
+        }
     }
     
     @objc func submitForm() {
         guard case .success(_) = interactor.isValid() else {
             return
         }
-        let alert = UIAlertController(title: "Success", message: "Thank you, the data has been saved.", preferredStyle: .alert)
+        let alert = UIAlertController(title: DateViewConfig.Strings.SaveComplete.title, message: DateViewConfig.Strings.SaveComplete.message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Done", style: .cancel, handler: nil))
         present(alert, animated: false, completion: nil)
     }
